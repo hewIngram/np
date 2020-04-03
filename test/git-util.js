@@ -14,7 +14,7 @@ test('verifyCurrentBranchIsDefault doesn\'t throw if current branch is master', 
 	await t.notThrowsAsync(gitUtil.verifyCurrentBranchIsDefault);
 });
 
-test('verifyCurrentBranchIsDefault throws if current branch is not master', async t => {
+test('verifyCurrentBranchIsDefault throws if current branch is not master or default', async t => {
 	currentBranchStub.returns('not master');
 	await t.throwsAsync(gitUtil.verifyCurrentBranchIsDefault);
 });

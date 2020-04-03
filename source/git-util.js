@@ -40,7 +40,7 @@ exports.currentBranch = async () => {
 
 exports.verifyCurrentBranchIsDefault = async (defaultBranch = 'master') => {
 	if (await exports.currentBranch() !== defaultBranch) {
-		throw new Error('Not on `master` branch. Use --any-branch to publish anyway.');
+		throw new Error('Not on `' + defaultBranch + '` branch. Use --any-branch to publish anyway.');
 	}
 };
 
