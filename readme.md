@@ -19,7 +19,7 @@
 ## Why
 
 - [Interactive UI](#interactive-ui)
-- Ensures you are publishing from the `master` branch
+- Ensures you are publishing from the `master` branch (or your production branch)
 - Ensures the working directory is clean and that there are no unpulled changes
 - Reinstalls dependencies to ensure your project works with the latest dependency tree
 - Runs the tests
@@ -63,7 +63,7 @@ $ np --help
 
   Options
     --any-branch        Allow publishing from any branch
-    --branch            Branch name to set as default branch [Default: master]
+    --branch            Allow publishing from only the given branch [Default: master]
     --no-cleanup        Skips cleanup of node_modules
     --no-tests          Skips tests
     --yolo              Skips cleanup and testing
@@ -96,6 +96,7 @@ Run `np` without arguments to launch the interactive UI that guides you through 
 Currently, these are the flags you can configure:
 
 - `anyBranch` - Allow publishing from any branch (`false` by default).
+- `branch` - Allow publishing from the given branch *only* (`master` by default).
 - `cleanup` - Cleanup `node_modules` (`true` by default).
 - `tests` - Run `npm test` (`true` by default).
 - `yolo` - Skip cleanup and testing (`false` by default).
